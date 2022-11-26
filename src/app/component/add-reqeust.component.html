@@ -1,0 +1,15 @@
+<div class="container column-align">
+    <h2 class="mat-title">New Request</h2>
+    <form class="column-align" style="margin-top: 25px; padding-bottom: 10px;" [formGroup]="requestForm" (ngSubmit)="addRequest()">
+        <mat-form-field appearance="outline">
+            <mat-label>Show Title</mat-label>
+            <input matInput formControlName="name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Reference Link</mat-label>
+            <input matInput formControlName="link">
+            
+        </mat-form-field>
+        <button mat-raised-button color="primary" [disabled]="!isValid">Submit</button>        
+    </form>
+</div>
